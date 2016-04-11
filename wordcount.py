@@ -22,4 +22,6 @@ for line in list_of_lines:
         else:
             word_dict[word] = value + 1
 
-print word_dict
+for word, count in word_dict.items():
+    print "%s %d" % (word, count)
+
