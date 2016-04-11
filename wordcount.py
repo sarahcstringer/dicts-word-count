@@ -8,4 +8,18 @@ for line in text:
     line = line.split(' ')
     list_of_lines.append(line)
 
-print list_of_lines
+# return list_of_lines
+
+# print list_of_lines
+
+word_dict = {}
+
+for line in list_of_lines:
+    for word in line:
+        value = word_dict.get(word, 0)
+        if value == 0:
+            word_dict[word] = 1
+        else:
+            word_dict[word] = value + 1
+
+print word_dict
