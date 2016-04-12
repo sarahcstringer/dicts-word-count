@@ -16,14 +16,21 @@ word_dict = {}
 
 for word in list_of_lines:
 
-    value = word_dict.get(word, 0)
-    word_dict[word] = value + 1
+    #This is the most efficient way
+    word_dict[word] = word_dict.get(word, 0) + 1
     
-    # if value == 0:
-    #     word_dict[word] = 1
-    # else:
-    #     word_dict[word] = value + 1
+    #This is a more efficient way
+        # word_dict[word] = value + 1
+    
+    #This is the least efficient way
+        # if value == 0:
+        #     word_dict[word] = 1
+        # else:
+        #     word_dict[word] = value + 1
 
 for word, count in word_dict.items():
     print "%s %d" % (word, count)
+
+
+
 
